@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - Formtea</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
+    <style>
+      body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff; /* 배경을 흰색으로 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 350px; /* 최대 너비를 좀 더 작게 설정 */
+    background: white;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-container h2 {
+    font-family: 'Baloo', sans-serif; /* Baloo 폰트 적용 */
+    font-weight: 500;
+    font-size: 36px;
+    margin-bottom: 40px; /* h2와 입력창 사이의 여백 추가 */
+    line-height: 0.5;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box; /* 여백 포함한 크기 설정 */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+.divider {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.social-btn img {
+    width: 36px;
+    height: 36px;
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+}
+
+.kakao {
+    background-color: #ffe812;
+}
+
+.naver {
+    background-color: #00c300;
+}
+
+.google {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+.signup-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+   .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    margin-top: 20px; /* 추가된 부분 */
+}
+.login-container h2 {
+    font-family: 'Baloo', sans-serif; /* Baloo 폰트 적용 */
+    font-weight: 500;
+    font-size: 32px; /* 적당한 크기로 폰트 크기 조정 */
+    margin-bottom: 80x; /* h2와 입력창 사이의 여백 추가 */
+    line-height: 0.5; /* 줄 간격을 조정하여 가독성 향상 */
+}
+
+.login-container h2 span {
+    font-size: 0.5em; /* "폼티" 글씨 크기 더 작게 */
+    color: #777; /* 색상 설정 */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- FORMTEA 로고 부분 -->
+        <h2>FORMTEA<br><span>폼티</span></h2> <!-- 두 줄로 텍스트 작성 -->
+        
+        <form action="process_login.php" method="POST">
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="이메일" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="비밀번호" required>
+            </div>
+            <button type="submit" class="login-btn">로그인</button>
+        </form>
+        <div class="divider">또는</div>
+        <div class="social-login">
+            <button class="social-btn kakao">
+                <img src="img/kakao_logo.png" alt="Kakao">
+            </button>
+            <button class="social-btn naver">
+                <img src="img/naver_logo.png" alt="Naver">
+            </button>
+            <button class="social-btn google">
+                <img src="img/google_logo.png" alt="Google">
+            </button>
+        </div>
+        <p class="signup-text">아직 회원이 아니신가요? <a href="signup.html">회원가입</a></p>
+    </div>
+</body>
+</html>
